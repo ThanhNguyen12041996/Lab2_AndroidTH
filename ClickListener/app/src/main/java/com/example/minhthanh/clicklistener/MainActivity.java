@@ -16,9 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView textview;
     ImageView img;
-    String url = "http://sv1.upsieutoc.com/2018/03/07/MtPlus.md.jpg";
-    String color;
-    String contentreturn,colorreturn = "pink";
+    String url;
+    String ContentReturn, ColorReturn = "pink";
 
 
     @Override
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent i = new Intent(MainActivity.this,MainActivity2.class);
         i.putExtra("Content", textview.getText().toString());
-        i.putExtra("Color"  , colorreturn);
+        i.putExtra("Color"  , ColorReturn);
         startActivityForResult(i,REQUEST_ACT_MainActivity2);
 
     }
@@ -65,9 +64,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if( requestCode == REQUEST_ACT_MainActivity2) {
             if (resultCode == RESULT_OK) {
 
-                contentreturn = data.getStringExtra("Content");
-                colorreturn = data.getStringExtra("Color");
-                GotoSetup(contentreturn, colorreturn);
+                ContentReturn = data.getStringExtra("Content");
+                ColorReturn = data.getStringExtra("Color");
+                GotoSetup(ContentReturn, ColorReturn);
             }
         }
 
@@ -84,27 +83,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void GotoSetup(String content, String color)
     {
         textview.setText(content);
-        if( color.equalsIgnoreCase("pink")) {
+        if( color.equalsIgnoreCase("pink"))
             textview.setTextColor(getResources().getColor(R.color.pink));
-            color = "pink";
-        }
-        else if( color.equalsIgnoreCase("purple")){
+
+        else if( color.equalsIgnoreCase("purple"))
             textview.setTextColor(getResources().getColor(R.color.purple));
-            color = "purple";}
-        else if( color.equalsIgnoreCase("indigo")) {
+
+        else if( color.equalsIgnoreCase("indigo"))
             textview.setTextColor(getResources().getColor(R.color.indigo));
-            color = "indigo";
-        }
-        else if( color.equalsIgnoreCase("blue")){
+
+        else if( color.equalsIgnoreCase("blue"))
             textview.setTextColor(getResources().getColor(R.color.blue));
-            color = "blue";}
-        else if( color.equalsIgnoreCase("teal")){
+
+        else if( color.equalsIgnoreCase("teal"))
             textview.setTextColor(getResources().getColor(R.color.teal));
-            color = "teal";}
-        else if( color.equalsIgnoreCase("green")) {
+
+        else if( color.equalsIgnoreCase("green"))
                 textview.setTextColor(getResources().getColor(R.color.green));
-                color = "green";
-            }
+
     }
 
     @Override
@@ -113,8 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v.getId() == R.id.button1)
                 StartBActivity();
         else
-            StartCActivity();
-
+                StartCActivity();
 
     }
 }

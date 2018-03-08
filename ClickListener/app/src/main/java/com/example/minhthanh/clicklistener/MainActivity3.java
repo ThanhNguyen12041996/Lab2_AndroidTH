@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -20,6 +19,10 @@ public class MainActivity3 extends AppCompatActivity {
     @BindView(R.id.imageView1) ImageView img1;
     @BindView(R.id.imageView2) ImageView img2;
     @BindView(R.id.imageView3) ImageView img3;
+
+    @BindView(R.id.imageView4) ImageView img4;
+    @BindView(R.id.imageView5) ImageView img5;
+    @BindView(R.id.imageView6) ImageView img6;
     @BindView(R.id.button)     Button btn1;
 
 
@@ -33,6 +36,11 @@ public class MainActivity3 extends AppCompatActivity {
         Picasso.with(getApplicationContext()).load("https://uphinhnhanh.com/images/2018/03/07/shutterstock_280897220_huge.th.jpg").into(img1);
         Picasso.with(getApplicationContext()).load("https://uphinhnhanh.com/images/2018/03/07/shutterstock_316465280_huge.th.jpg").into(img2);
         Picasso.with(getApplicationContext()).load("http://sv1.upsieutoc.com/2018/03/07/MtPlus.md.jpg").into(img3);
+
+        Picasso.with(getApplicationContext()).load("http://sv1.upsieutoc.com/2018/03/08/shutterstock_333376544_huge.md.jpg").into(img4);
+        Picasso.with(getApplicationContext()).load("http://sv1.upsieutoc.com/2018/03/08/shutterstock_248651677_supersize.md.jpg").into(img5);
+        Picasso.with(getApplicationContext()).load("http://sv1.upsieutoc.com/2018/03/08/shutterstock_390660301_huge.md.jpg").into(img6);
+
     }
 
     @OnClick(R.id.imageView1)
@@ -48,6 +56,21 @@ public class MainActivity3 extends AppCompatActivity {
     @OnClick(R.id.imageView3)
     public void iv3( View view) {
         url =  "http://sv1.upsieutoc.com/2018/03/07/MtPlus.md.jpg" ;
+    }
+
+    @OnClick(R.id.imageView4)
+    public void iv4( View view) {
+        url =  "http://sv1.upsieutoc.com/2018/03/08/shutterstock_333376544_huge.md.jpg" ;
+    }
+
+    @OnClick(R.id.imageView5)
+    public void iv5( View view) {
+        url =  "http://sv1.upsieutoc.com/2018/03/08/shutterstock_248651677_supersize.md.jpg" ;
+    }
+
+    @OnClick(R.id.imageView6)
+    public void iv6( View view) {
+        url =  "http://sv1.upsieutoc.com/2018/03/08/shutterstock_390660301_huge.md.jpg" ;
     }
 
     @OnClick(R.id.button)
