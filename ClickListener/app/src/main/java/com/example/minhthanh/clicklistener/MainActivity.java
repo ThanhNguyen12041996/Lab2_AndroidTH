@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView textview;
     ImageView img;
-    String url;
+    String url = "http://sv1.upsieutoc.com/2018/03/07/MtPlus.md.jpg";
     String ContentReturn, ColorReturn = "pink";
 
 
