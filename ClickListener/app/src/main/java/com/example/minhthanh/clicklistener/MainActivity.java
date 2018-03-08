@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textview.setText("KHTN-DTVT");
         textview.setTextColor(getResources().getColor(R.color.pink));
         img = (ImageView)findViewById(R.id.imageView);
+        Picasso.with(getApplicationContext()).load(url).into(img);
 
         Button button1 = (Button)findViewById(R.id.button1);
         Button button2 = (Button)findViewById(R.id.button2);
