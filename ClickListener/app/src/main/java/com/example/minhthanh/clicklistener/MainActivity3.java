@@ -58,11 +58,5 @@ public class MainActivity3 extends AppCompatActivity {
         setResult(RESULT_OK, i);
         finish();
     }
-
-
-
-
-
-
     }
 

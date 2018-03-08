@@ -104,19 +104,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textview.setTextColor(getResources().getColor(R.color.green));
                 color = "green";
             }
-
     }
 
     @Override
     public void onClick(View v) {
 
         if(v.getId() == R.id.button1)
-
                 StartBActivity();
         else
-        {
             StartCActivity();
-        }
+
 
     }
 }
